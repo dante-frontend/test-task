@@ -1,0 +1,11 @@
+.winners {
+  overflow: hidden;
+  margin-bottom: 16px;
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+}

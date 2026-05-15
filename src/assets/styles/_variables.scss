@@ -1,0 +1,22 @@
+@use "fonts" as *;
+
+// Colors
+$color-primary: #ffffff;
+$color-secondary: #9FA1AA;
+$bg-color-primary: #0F152B;
+$bg-color-secondary: #2B324C;
+
+$color-orange: #FF8500;
+$color-green: #289211;
+
+// Fonts
+$font-base: Rubik, sans-serif;
+
+// Breakpoints
+$breakpoint-sm: 575px;
+$breakpoint-md: 767px;
+$breakpoint-lg: 991px;
+
+// Other
+$radius: 16px;
+$radius-small: 8px;

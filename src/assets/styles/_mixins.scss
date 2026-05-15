@@ -1,0 +1,42 @@
+@use "variables" as *;
+
+@mixin button-secondary {
+  font-size: 12px;
+  font-weight: 500;
+  color: $color-primary;
+  line-height: 16px;
+  text-align: center;
+  background-color: $bg-color-secondary;
+  border-radius: $radius-small;
+  padding: 4px 8px;
+}
+
+@mixin input-style {
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-secondary;
+  background-color: $bg-color-secondary;
+  border-radius: 12px;
+  border: none;
+  padding: 14px 48px;
+
+  &::placeholder {
+    font-size: 14px;
+    color: $color-secondary;
+  }
+}
+
+@mixin scrollbar-style {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: $bg-color-primary;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $bg-color-secondary;
+    border-radius: 5px;
+    border: 2px solid $bg-color-primary;
+  }
+}

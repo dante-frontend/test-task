@@ -1,0 +1,100 @@
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  z-index: 1000;
+
+  &.hidden {
+    display: none;
+  }
+
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 0;
+  }
+  &__dialog {
+    width: 800px;
+    max-height: 80vh;
+    border-radius: $radius;
+    overflow: hidden;
+  }
+  &__header {
+    position: relative;
+    background-color: $bg-color-secondary;
+    padding: 16px 40px;
+    text-align: center;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $color-primary;
+  }
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 18px;
+    color: $color-primary;
+  }
+  &__content {
+    position: relative;
+    background-color: $bg-color-primary;
+    padding: 24px;
+  }
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  &__input-wrapper {
+    position: relative;
+  }
+  &__input {
+    @include input-style;
+    background-image: url('src/assets/images/search-icon-modal.svg');
+    background-position: 16px center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    margin-bottom: 24px;
+  }
+  &__input-clear-btn {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    font-size: 18px;
+    color: $color-secondary;
+    line-height: 20px;
+  }
+  &__games-list {
+    margin-bottom: 0;
+    overflow-y: auto;
+
+    .games-list {
+      &__nav-btn {
+        display: none;
+      }
+      &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    .game-card {
+      width: auto;
+
+      &__image {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

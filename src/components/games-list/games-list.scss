@@ -1,0 +1,39 @@
+.games-list {
+  position: relative;
+  margin-bottom: 16px;
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-primary;
+    text-transform: capitalize;
+  }
+  &__nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+
+    .nav-btn {
+      @include button-secondary;
+
+      &--prev,
+      &--next {
+        padding: 4px 10px;
+      }
+    }
+  }
+  &__cards {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    //transition: transform 0.5s ease-in-out;
+  }
+}

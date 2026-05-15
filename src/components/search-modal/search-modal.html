@@ -1,0 +1,23 @@
+<div id="search-modal" class="modal hidden" aria-labelledby="modal-title">
+    <div class="modal__overlay"></div>
+
+    <div class="modal__dialog">
+        <div class="modal__header">
+            <h2 id="modal-title" class="modal__title">Search</h2>
+            <button id="modal-close" class="modal__close">✖</button>
+        </div>
+
+        <div class="modal__content">
+            <p class="modal__subtitle">Enter the game title in the search below</p>
+
+            <div class="modal__input-wrapper">
+                <input type="text" class="modal__input" placeholder="Search">
+                <button id="input-clear" class="modal__input-clear-btn">✖</button>
+            </div>
+
+            <section id="search-games-list" class="games-list modal__games-list">
+                <!-- Data from the all-games.js will be inserted here -->
+            </section>
+        </div>
+    </div>
+</div>
