@@ -4,11 +4,23 @@
   width: 272px;
   overflow: hidden;
 
+  @media screen and (max-width: $breakpoint-md) {
+    flex-basis: 160px;
+    width: 160px;
+  }
+
+  &.hidden {
+    display: none;
+  }
   &__image {
     position: relative;
     height: 188px;
     border-radius: $radius;
     overflow: hidden;
+
+    @media screen and (max-width: $breakpoint-md) {
+      height: 106px;
+    }
 
     &:hover,
     &:focus {
@@ -17,10 +29,15 @@
         visibility: visible;
       }
     }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   &__title {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     gap: 8px;
     min-height: 28px;
@@ -31,7 +48,7 @@
       font-weight: 700;
       color: $color-secondary;
       text-transform: capitalize;
-      line-height: 20px;
+      line-height: 16px;
     }
   }
   &__actions {
@@ -56,6 +73,10 @@
     visibility: hidden;
     transition: all .3s ease;
 
+    @media screen and (max-width: $breakpoint-md) {
+      padding-bottom: 0;
+    }
+
     .btn {
       font-weight: 700;
       color: $color-primary;
@@ -63,12 +84,20 @@
       padding: 16px;
       z-index: 1;
 
+      @media screen and (max-width: $breakpoint-md) {
+        padding: 8px 16px;
+      }
+
       &-play {
         min-width: 126px;
         font-size: 16px;
         background-color: $color-orange;
         border-radius: $radius;
         transition: box-shadow .3s ease;
+
+        @media screen and (max-width: $breakpoint-md) {
+          min-width: auto;
+        }
 
         &:hover,
         &:focus {

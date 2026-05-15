@@ -20,6 +20,10 @@ body {
   color: $color-primary;
   background-color: $bg-color-primary;
   overflow-x: hidden;
+
+  &.open-modal {
+    overflow-y: hidden;
+  }
 }
 
 a {
@@ -43,4 +47,9 @@ button {
   margin: 0 auto;
   padding-left: 24px;
   padding-right: 24px;
+
+  @media screen and (max-width: $breakpoint-md) {
+    padding-left: 16px;
+    padding-right: 0;
+  }
 }

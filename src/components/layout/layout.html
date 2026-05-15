@@ -7,7 +7,11 @@
 </header>
 
 <section class="banner">
-    <img src="/images/banner.jpg" alt="Banner">
+    <picture>
+        <source srcset="/images/banner-mob.jpg" media="(max-width: 575px)">
+        <source srcset="/images/banner.jpg" media="(min-width: 576px)">
+        <img src="/images/banner.jpg" alt="Banner">
+    </picture>
 </section>
 
 <main class="container main">

@@ -9,6 +9,7 @@ export function initSearchModal() {
     if (!document.getElementById('modal')) {
         // Insert a modal at the end of the body
         document.body.insertAdjacentHTML('beforeend', modalRaw);
+        document.body.classList.add('open-modal');
 
         // Render games list
         renderGamesList('search-games-list', allGamesData, false);
@@ -34,9 +35,9 @@ export function initSearchModal() {
                 const title = card.querySelector('.game-card__title').textContent.toLowerCase();
 
                 if (title.includes(query)) {
-                    card.style.display = ''; // показываем
+                    card.classList.remove('hidden');
                 } else {
-                    card.style.display = 'none'; // скрываем
+                    card.classList.add('hidden');
                 }
             });
         });
@@ -44,11 +45,13 @@ export function initSearchModal() {
         // Close modal
         closeBtn.addEventListener('click', () => {
             modal.classList.add('hidden');
+            document.body.classList.remove('open-modal');
         });
 
         // Close by clicking on the overlay
         modalOverlay.addEventListener('click', () => {
             modal.classList.add('hidden');
+            document.body.classList.remove('open-modal');
         });
     }
 

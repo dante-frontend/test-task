@@ -13,7 +13,14 @@ export function renderGamesList(containerId, data, sliderOn = true) {
 
     if (data.title) {
         const titleContainer = container.querySelector('.games-list__title');
-        titleContainer.textContent = data.title[0];
+
+        if (data.title.length > 1) {
+            data.title.forEach((title, index) => {
+                titleContainer.insertAdjacentHTML('beforeend', `<span ` + (index === 0 ? `class="active"` : ``) + `>${title}</span>`);
+            });
+        } else {
+            titleContainer.textContent = data.title[0];
+        }
     }
 
     const cardsContainer = container.querySelector('.games-list__cards');
