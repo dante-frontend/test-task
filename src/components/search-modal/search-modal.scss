@@ -90,7 +90,6 @@
   }
   &__games-list {
     margin-bottom: 0;
-    overflow-y: auto;
 
     .games-list {
       &__nav-btn {
@@ -99,6 +98,8 @@
       &__cards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        max-height: calc(80vh - 264px);
+        overflow-y: auto;
 
         @media screen and (max-width: $breakpoint-sm) {
           grid-template-columns: 1fr 1fr;
